@@ -13,16 +13,16 @@
         <div id="cabecera">
             <h1> El rival más Debil</h1>
         </div>
-        <div id="menu">
+        <div id="puntos">
             <div class="dinero">$5,000</div>
             <div class="dinero">$4,000</div>
             <div class="dinero">$3,000</div>
             <div class="dinero">$2,250</div>
             <div class="dinero">$1,500</div>
             <div class="dinero">$1,000</div>
-            <div class="dinero">$500</div>
-            <div class="dinero">$250</div>
-            <div class="dinero">$100</div>
+            <div id="capsula2" class="dinero">$500</div>
+            <div id="capsula1" class="dinero">$250</div>
+            <div class="dineroSelecionado">$100</div>
             <br>
             <div class="dinero">
                 <p class="acumulado">$100</p>
@@ -30,9 +30,37 @@
             </div>
         </div>
         <div id="contenido">
-            <div>Contenido</div>
+            <div id="AgregarJugadores" class="AgregarJugadores">
+                <form >
+                    <label>Selecciona el número de jugadores:</label>
+                    <select name="numJugadores" id="numJugadores">
+                        <option value="0" selected> Seleciona el número de jugadores
+                        <option value="2" > 2 jugadores.
+                        <option value="3" > 3 jugadores.
+                        <option value="4" > 4 jugadores.
+                        <option value="5" > 5 jugadores.
+                        <option value="6" > 6 jugadores.
+                        <option value="7" > 7 jugadores.
+                        <option value="8" > 8 jugadores.
+                        <option value="9" > 9 jugadores.
+                    </select>
+                    <br>
+                    <label>SAgrega los nombres de los jugadores separados por comas:</label>
+                    <input type="text" name="nombreJugadores" id="nombreJugadores">
+                    <input type="button" value="Actualizar" onclick="agregarJugadores();" >
+                </form>                
+            </div>
+            <div id="jugadores" class="jugadores">
+            </div>
+            <div id="menu" class="menu">
+                <div>
+                    <button>Banco</button>
+                    <button onclick="respuestaCorrecta()">Correcto</button>
+                    <button>Incorrecto</button>
+                </div>
+            </div>
         </div>
     </div>
-    
+    <script src="index.js"></script>
 </body>
 </html>
